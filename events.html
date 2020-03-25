@@ -11,30 +11,53 @@
     <script src="js/jquery.js"></script>
     <script>
         $("document").ready(function(){
-          $("#textBox").on("click", whenMouseIsClicked)
-          $('#textBox').on("mouseleave", whenMouseLeaves)
+          // $("#textBox").on("click", whenMouseIsClicked)
+          // $('#textBox').on("mouseleave", whenMouseLeaves)
 
-          function whenMouseIsClicked(){
-            $("#textBox").html("<h1> was clicked </h1>")
-          }
-          function whenMouseLeaves(){
-            $("#textBox").html("<h1> mouse left </h1>")
-          }
+          // function whenMouseIsClicked(){
+          //   $("#textBox").html("<h1> was clicked </h1>")
+          // }
+          // function whenMouseLeaves(){
+          //   $("#textBox").html("<h1> mouse left </h1>")
+          // }
+
+          //   $("#show").on("click", function(){
+          //     $("#textBox").show()
+          //   })
+          //   $("#hide").on("click", function(){
+          //     $("#textBox").hide()
+          //   })
+
+            $(".textCopy").hover(highlightCopy)
+
+            function highlightCopy() {
+
+              $(this).toggleClass("highlight")
+            }
         })
     </script>
 
     <style>
-      #textBox{
-        width: 200px;
+      /* #textBox{
+         width: 200px;
         height: 100px;
-        border: 1px solid white;
-        color: white;
+        border: 1px solid black; */
+        /* color: white;
         background-color: black;
+
+        display: none; */
+      /* } */
+
+      .highlight {
+        background: red;
       }
+
     </style>
   </head>
   <body>
-    <div id='textBox'>
-    </div>
+<!-- <a href='#' id='show'> Click to show </a> | 
+<a href='#' id='hide'> Click to hide </a> -->
+
+<div id='textBox' class='textCopy'> gdfgfddgdfgdfg dfdsfdsf </div>
   </body>
 </html>
